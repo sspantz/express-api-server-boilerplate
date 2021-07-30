@@ -1,10 +1,11 @@
-const express = require("express");
+/* eslint-disable no-console */
+const express = require('express');
 
 const app = express();
 
-app.get("/", (req, res) => {
+app.get('/', (req, res) => {
   res.json({
-    status: "OK",
+    status: 'OK',
   });
 });
 
