@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "lint": "eslint src/**/*js"
+    "start": "node dist/index.js",
+    "lint": "eslint src/**/*js",
+    "build": "babel src --out-dir dist"
   },
   "keywords": [],
   "author": "",
