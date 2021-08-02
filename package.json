@@ -14,7 +14,8 @@
     "dev": "nodemon --ignore dist/ --exec npm run restart",
     "dev:light": "nodemon --ignore dist --exec npm run restart:es6",
     "test": "jest src",
-    "coverage": "npm run test -- --coverage"
+    "coverage": "npm run test -- --coverage",
+    "validate": "npm-run-all --parallel lint test"
   },
   "keywords": [
     "express",
@@ -44,6 +45,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "jest": "^27.0.6",
     "nodemon": "^2.0.12",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.3.2",
     "rimraf": "^3.0.2"
   }
