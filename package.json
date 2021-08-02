@@ -11,7 +11,7 @@
     "clean": "rimraf dist",
     "restart": "npm run clean && npm run build && npm run start",
     "restart:es6": "npm run clean && npm run start:es6",
-    "dev": "nodemon --ignore dist --exec npm run restart",
+    "dev": "nodemon --ignore dist/ --exec npm run restart",
     "dev:light": "nodemon --ignore dist --exec npm run restart:es6"
   },
   "keywords": [],
