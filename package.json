@@ -5,11 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "node dist/index.js",
+    "start:es6": "babel-node src/index.js",
     "lint": "eslint src/**/*js",
     "build": "babel src --out-dir dist",
     "clean": "rimraf dist",
     "restart": "npm run clean && npm run build && npm run start",
-    "dev": "nodemon --ignore dist --exec npm run restart"
+    "restart:es6": "npm run clean && npm run start:es6",
+    "dev": "nodemon --ignore dist --exec npm run restart",
+    "dev:light": "nodemon --ignore dist --exec npm run restart:es6"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +23,9 @@
   "devDependencies": {
     "@babel/cli": "^7.14.8",
     "@babel/core": "^7.14.8",
+    "@babel/node": "^7.14.9",
     "@babel/preset-env": "^7.14.8",
+    "@babel/register": "^7.14.5",
     "eslint": "^7.31.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.3.0",
