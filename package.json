@@ -14,7 +14,14 @@
     "dev": "nodemon --ignore dist/ --exec npm run restart",
     "dev:light": "nodemon --ignore dist --exec npm run restart:es6"
   },
-  "keywords": [],
+  "keywords": [
+    "express",
+    "rest",
+    "api",
+    "node",
+    "server",
+    "boilerplate"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
