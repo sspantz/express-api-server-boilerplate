@@ -7,9 +7,10 @@
     "commit": "cz",
     "start": "node dist/index.js",
     "start:es6": "babel-node src/index.js",
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "lint": "eslint src/**/*js",
     "build": "babel src --out-dir dist",
-    "clean": "rimraf dist",
+    "clean": "rimraf dist .cache",
     "restart": "npm run clean && npm run build && npm run start",
     "restart:es6": "npm run clean && npm run start:es6",
     "dev": "nodemon --ignore dist/ --exec npm run restart",
@@ -46,6 +47,7 @@
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-jest": "^24.4.0",
     "eslint-plugin-prettier": "^3.4.0",
+    "ghooks": "^2.0.4",
     "jest": "^27.0.6",
     "nodemon": "^2.0.12",
     "npm-run-all": "^4.1.5",
@@ -55,6 +57,9 @@
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
+    },
+    "ghooks": {
+      "pre-commit": "npm run validate"
     }
   }
 }
