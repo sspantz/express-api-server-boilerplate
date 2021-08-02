@@ -15,7 +15,5 @@ app.get("/", (req, res) => {
 
 const port = 4000
 
-const start = () =>
+export default () =>
   app.listen(port, () => console.log(`listening on port ${port}.`))
-
-export default start
