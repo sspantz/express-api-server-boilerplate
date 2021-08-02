@@ -16,6 +16,7 @@
     "dev": "nodemon --ignore dist/ --exec npm run restart",
     "dev:light": "nodemon --ignore dist --exec npm run restart:es6",
     "test": "jest src",
+    "test:watch": "npm run test -- --watch",
     "coverage": "npm run test -- --coverage",
     "validate": "npm-run-all --parallel lint test"
   },
