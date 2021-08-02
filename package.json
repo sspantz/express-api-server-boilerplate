@@ -8,7 +8,7 @@
     "start": "node dist/index.js",
     "start:es6": "babel-node src/index.js",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
-    "lint": "eslint src/**/*js",
+    "lint": "npm run format && eslint src/**/*js",
     "build": "babel src --out-dir dist",
     "clean": "rimraf dist .cache",
     "restart": "npm run clean && npm run build && npm run start",
@@ -52,14 +52,16 @@
     "nodemon": "^2.0.12",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.3.2",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "validate-commit-msg": "^2.14.0"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     },
     "ghooks": {
-      "pre-commit": "npm run validate"
+      "pre-commit": "npm run validate",
+      "commit-msg": "validate-commit-msg"
     }
   }
 }
