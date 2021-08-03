@@ -15,8 +15,8 @@ A boilerplate for api server with express
 - scripts related to running app
   - `start`, start the server
   - `start:build`, start the server with build process
-  - `dev`, start the server in hot reload mode(HRM)
-  - `dev:build`, start the server in HRM with build process
+  - `dev`, start the server in live reload
+  - `dev:build`, start the server in live reload with build process
   - `test`, run test onece
   - `test:watch`, run test and rerun test when code changes
   - `test:coverage`, run test and show the coverage report
