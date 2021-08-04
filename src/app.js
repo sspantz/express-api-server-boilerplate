@@ -15,6 +15,10 @@ app.get("/", (req, res) => {
   })
 })
 
+app.get("/error", (req, res) => {
+  res.sendStatus(400)
+})
+
 const env = process.env.NODE_ENV ?? config.env
 const port = process.env.PORT || (env === "PROD" ? 3000 : 5000)
 
