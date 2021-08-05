@@ -1,3 +1,8 @@
-import start from "./app"
+import app from "./app"
+import config from "../config"
 
-start()
+const env = process.env.NODE_ENV ?? config.env
+const port = process.env.PORT || (env === "PROD" ? 3000 : 5000)
+
+// eslint-disable-next-line no-console
+app.listen(port, () => console.log(`server i s listen on port ${port}`))
