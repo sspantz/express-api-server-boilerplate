@@ -14,5 +14,9 @@
     "sourceType": "module"
   },
   "rules": {
+    "jest/expect-expect": [
+      1,
+      {"assertFunctionNames": ["expect", "request"]}
+    ]
   }
 }
